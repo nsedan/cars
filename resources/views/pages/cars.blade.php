@@ -29,9 +29,15 @@
                     <td>{{ $car->model }}</td>
                     <td>{{ $car->colour }}</td>
                     <td>{{ $car->top_speed }}</td>
-                    <td><a href="/cars/{{$car->id}}">View</a></td>
-                    <td><a href="/cars/{{$car->id}}/edit">Edit</a></td>
-                    <td><a href="#">Delete</a></td>
+                    <td><a class="btn btn-secondary btn-sm" href="/cars/{{ $car->id }}">View</a></td>
+                    <td><a class="btn btn-secondary btn-sm" href="/cars/{{ $car->id }}/edit">Edit</a></td>
+                    <td>
+                        <form action="{{ route('cars.destroy', $car->id) }}" method="POST">
+                            @csrf
+                            <input type="hidden" name="_method" value="delete">
+                            <button class="btn btn-secondary btn-sm" type="submit">Delete</button>
+                        </form>
+                    </td>
                 </tr>
             </tbody>
         @endforeach

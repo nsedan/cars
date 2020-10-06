@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h4 class="m-2">CARS FORM</h4>
+<h4 class="mt-4 mb-4">CARS FORM</h4>
 <form class="mt-4" action="{{ route('cars.store') }}" method="POST">
     @csrf
     <div class="form-group row">

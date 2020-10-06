@@ -11,9 +11,4 @@ class PagesController extends Controller
         $car = Car::all();
         return view('pages.cars')->with('cars', $car);
     }
-
-    // public function form(){
-    //     return view('pages.form');
-    // }
-    
 }
