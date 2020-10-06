@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\CarsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,5 @@ use App\Http\Controllers\PagesController;
 */
 
 Route::get('/', [PagesController::class, 'cars']);
-Route::get('/form', [PagesController::class, 'form']);
+
+Route::resource('cars', CarsController::class);

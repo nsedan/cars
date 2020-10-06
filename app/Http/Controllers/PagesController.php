@@ -8,11 +8,12 @@ use App\Models\Car;
 class PagesController extends Controller
 {
     public function cars(){
-        $data = Car::all();
-        return view('pages.cars')->with('cars', $data);
+        $car = Car::all();
+        return view('pages.cars')->with('cars', $car);
     }
 
-    public function form(){
-        return view('pages.form');
-    }
+    // public function form(){
+    //     return view('pages.form');
+    // }
+    
 }

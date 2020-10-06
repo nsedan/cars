@@ -1,12 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="row m-2">
+<div class="row mt-3 mb-3">
     <div class="col-6">
         <h4 class="m-0">CARS TABLE</h4>
     </div>
     <div class="col-2 offset-4">
-        <a class="btn btn-secondary btn-sm" href="#" role="button">New</a>
+        <a class="btn btn-secondary btn-sm" href="/cars/create" role="button">New</a>
     </div>
 </div>
 <table class="table">
@@ -29,8 +29,8 @@
                     <td>{{ $car->model }}</td>
                     <td>{{ $car->colour }}</td>
                     <td>{{ $car->top_speed }}</td>
-                    <td><a href="/form">View</a></td>
-                    <td><a href="/form">Edit</a></td>
+                    <td><a href="/cars/{{$car->id}}">View</a></td>
+                    <td><a href="/cars/{{$car->id}}/edit">Edit</a></td>
                     <td><a href="#">Delete</a></td>
                 </tr>
             </tbody>

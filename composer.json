@@ -14,7 +14,8 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "hirak/prestissimo": "^0.3.10",
         "laravel/framework": "^8.0",
-        "laravel/tinker": "^2.0"
+        "laravel/tinker": "^2.0",
+        "laravelcollective/html": "^6.2"
     },
     "require-dev": {
         "facade/ignition": "^2.3.6",
